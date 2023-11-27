@@ -68,7 +68,7 @@ function BookDetail() {
         var res = await GetBookById(id)
         setBook(res?.data)
         var data = []
-        res?.data?.tags.forEach((item,index) => {
+        res?.data?.tags.forEach((item, index) => {
             data.push(item.id)
         });
         form.setFieldsValue({
@@ -103,12 +103,11 @@ function BookDetail() {
 
     const onFinish = async (values) => {
         setWait(true)
-        if(values.image.file)
-        {
+        if (values.image.file) {
             var url = await UploadImageAPI(values.image.file)
             console.log((url));
         }
-        
+
         var book = {
             title: values.title,
             description: values.description,
@@ -116,23 +115,23 @@ function BookDetail() {
             language: values.language,
             count: values.count,
             price: values.price,
-            image: url? url : imageURL,
+            image: url ? url : imageURL,
             publisherId: values.publisherId,
             authorId: values.authorId,
             tagIds: values.tags,
-            publishDate: dayjs(values?.dob).toJSON().slice(0,10)
+            publishDate: dayjs(values?.dob).toJSON().slice(0, 10)
         }
         // console.log(params?.id);
         // console.log(book);
         var res = await UpdateBook(params?.id, book)
         if (res?.code == 200) {
-            openNotificationWithIcon('success',"Thành công")
+            openNotificationWithIcon('success', "Thành công")
             setTimeout(() => {
                 window.location.reload()
             }, 1000);
         }
         else
-        openNotificationWithIcon('error',"Thất bại")
+            openNotificationWithIcon('error', "Thất bại")
 
         setWait(false)
     }
@@ -143,6 +142,14 @@ function BookDetail() {
                 wait && <Loading />
             }
             {contextHolder}
+
+            {/* <Row gutter={[24, 0]}>
+                <Col xs={24} md={16} className="mb-24">
+                    <Select defaultValue={form.authorId}>
+                        <Select.Option >sfdfsdfsd</Select.Option>
+                    </Select>
+                </Col>
+            </Row> */}
             <Row gutter={[24, 0]}>
                 <Col xs={24} md={16} className="mb-24">
                     <Card
@@ -291,7 +298,7 @@ function BookDetail() {
                                 rules={[{ required: true }]}
                             >
                                 <Select mode="multiple"
-                                defaultValue={form.tags}
+                                    defaultValue={form.tags}
                                 >
                                     {
                                         tags?.map((tag, index) => (
