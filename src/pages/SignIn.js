@@ -121,6 +121,7 @@ export default class SignIn extends Component {
   render() {
     const onFinish = async (values) => {
       var res = await Login(values.username, values.password)
+      console.log(res);
       if (res?.code == 200 && res?.data.role?.name == "Admin") {
         sessionStorage.setItem('isLogin', true)
         window.location = '/'

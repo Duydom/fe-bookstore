@@ -88,8 +88,9 @@ function OrderDetail() {
 
     const fecthData = async (id) => {
         var res = await GetOrderById(id)
+        console.log(res);
         var data = []
-        res?.data?.books?.map((item, index) => (
+        res?.data?.orderBooks?.map((item, index) => (
             data.push({
                 key: index,
                 index: (
@@ -105,16 +106,16 @@ function OrderDetail() {
                 ),
                 title: (
                     <>
-                        <a href={`/book/${item?.id}`}>
+                        <a href={`/book/${item?.book?.id}`}>
                             <Avatar.Group>
                                 <Avatar
                                     className="shape-avatar"
                                     shape="square"
                                     size={40}
-                                    src={item?.image}
+                                    src={item?.book?.image}
                                 ></Avatar>
                                 <div className="avatar-info">
-                                    <Title level={5} style={{ color: '#4096ff' }}>{item?.title}</Title>
+                                    <Title level={5} style={{ color: '#4096ff' }}>{item?.book?.title}</Title>
                                 </div>
                             </Avatar.Group>{" "}
                         </a>
@@ -125,7 +126,7 @@ function OrderDetail() {
                         <div className="ant-employed">
                             <span>
                                 {
-                                    item?.price
+                                    item?.book?.price
                                 }
                             </span>
                         </div>
@@ -136,7 +137,7 @@ function OrderDetail() {
                         <div className="ant-employed">
                             <span>
                                 {
-                                    res?.data?.quantities[index]?.count
+                                    res?.data?.orderBooks[index]?.quantity
                                 }
                             </span>
                         </div>

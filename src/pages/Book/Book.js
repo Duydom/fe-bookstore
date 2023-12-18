@@ -367,7 +367,7 @@ function Book() {
                                 },
                                 {
                                     type: 'string',
-                                    max: 255
+                                    // max: 255
                                 },
                             ]}
                         >

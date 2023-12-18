@@ -244,7 +244,7 @@ function EChart(props) {
         <div>
           <Title level={5}>Active Users</Title>
           <Paragraph className="lastweek">
-            than last month <span className="bnb2">{props?.users?.diff}%</span>
+            than last month <span style={{color : props?.users?.diff < 0 ? "red" : "#52c41a"}}>{props?.users?.diff}%</span>
           </Paragraph>
         </div>
       </div>
