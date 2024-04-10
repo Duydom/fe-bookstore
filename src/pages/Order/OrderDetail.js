@@ -47,7 +47,7 @@ const columns = [
         width: "10%",
     },
     {
-        title: "BOOK TITLE",
+        title: "ITEM TITLE",
         dataIndex: "title",
         key: "title",
     },
@@ -289,7 +289,7 @@ function OrderDetail() {
                 <Col xs={24} md={24} className="mb-24">
                     <Card
                         bordered={false}
-                        title={<h6 className="font-semibold m-0">List book order</h6>}
+                        title={<h6 className="font-semibold m-0">List item order</h6>}
                         className="header-solid h-full card-profile-information"
                         bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
                     >

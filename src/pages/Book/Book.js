@@ -136,7 +136,7 @@ function Book() {
                 id: item?.id,
                 title: (
                     <>
-                        <a href="/book">
+                        <a href="/shoe">
                             <Avatar.Group>
                                 <Avatar
                                     className="shape-avatar"
@@ -195,11 +195,11 @@ function Book() {
                     <>
                         <EditTwoTone
                             style={{ fontSize: 18, color: "blue", marginLeft: 12, cursor: "pointer" }}
-                            onClick={() => history.push("book/" + item?.id)}
+                            onClick={() => history.push("shoe/" + item?.id)}
                         />
                         {
                             (item?.isDeleted == false) ?
-                                <Popconfirm title="Bạn muốn xóa sách này?"
+                                <Popconfirm title="Bạn muốn xóa sản phẩm này?"
                                     onConfirm={() => handleDeleteBook(item?.id)}
                                 >
                                     <CloseOutlined
@@ -251,10 +251,10 @@ function Book() {
         var book = {
             title: a.title,
             description: a.description,
-            language: a.language,
+            language: "Vietnamese",
             price: a.price,
             publishDate: a.publishDate.toJSON(),
-            numberOfPages: a.numberOfPages,
+            size: a.size,
             count: a.count,
             publisherId: a.publisherId,
             authorId: a.authorId,
@@ -373,19 +373,6 @@ function Book() {
                         >
                             <TextArea />
                         </Form.Item>
-
-                        <Form.Item name="language" label="Language"
-                            rules={[
-                                {
-                                    required: true,
-                                },
-                                {
-                                    type: 'string',
-                                },
-                            ]}
-                        >
-                            <Input />
-                        </Form.Item>
                         <Row gutter={[24, 0]} >
                             <Col span={24} md={12}>
                                 <Form.Item name="price" label="Price"
@@ -413,7 +400,7 @@ function Book() {
                         </Row>
                         <Row gutter={[24, 0]} >
                             <Col span={24} md={12}>
-                                <Form.Item name="numberOfPages" label="Number of pages"
+                                <Form.Item name="size" label="Size"
                                     rules={[
                                         {
                                             required: true,

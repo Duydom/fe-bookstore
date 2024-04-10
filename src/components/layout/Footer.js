@@ -21,10 +21,10 @@ function Footer() {
       <Row className="just">
         <Col xs={24} md={12} lg={12}>
           <div className="copyright">
-            © 2023, made with
+            © 2024, made with
             {<HeartFilled />} by
-            <a href="https://www.facebook.com/ltmlanit" className="font-weight-bold" target="_blank">
-              Mỹ Lan
+            <a href="https://www.facebook.com" className="font-weight-bold" target="_blank">
+              Nhật Văn
             </a>
             for a better web.
           </div>

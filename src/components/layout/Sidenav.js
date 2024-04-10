@@ -171,10 +171,10 @@ function Sidenav({ color }) {
       <div className="brand">
         {/* <img src={logo} alt="" /> */}
         <div className="waviy">
-          <span className="span1" style={{ __i: "1" }}>B</span>
-          <span className="span2" style={{ __i: "2" }}>o</span>
+          <span className="span1" style={{ __i: "1" }}>S</span>
+          <span className="span2" style={{ __i: "2" }}>h</span>
           <span className="span3" style={{ __i: "3" }}>o</span>
-          <span className="span4" style={{ __i: "4" }}>k</span>
+          <span className="span4" style={{ __i: "4" }}>e</span>
           <span className="span5" style={{ __i: "5" }}> </span>
           <span className="span6" style={{ __i: "6" }}>S</span>
           <span className="span7" style={{ __i: "7" }}>t</span>
@@ -239,7 +239,7 @@ function Sidenav({ color }) {
           </NavLink>
         </Menu.Item>
         <Menu.Item key="5">
-          <NavLink to="/book">
+          <NavLink to="/shoe">
             <span
               className="icon"
               style={{
@@ -248,7 +248,7 @@ function Sidenav({ color }) {
             >
               <BookOutlined />
             </span>
-            <span className="label">Book</span>
+            <span className="label">Shoe</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="6">

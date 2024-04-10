@@ -49,8 +49,8 @@ function App() {
               <Route exact path="/rating" component={Rating} />
               {/* <Route exact path="/rating/:id" component={RatingDetail} /> */}
 
-              <Route exact path="/book" component={Book} />
-              <Route exact path="/book/:id" component={BookDetail} />
+              <Route exact path="/shoe" component={Book} />
+              <Route exact path="/shoe/:id" component={BookDetail} />
 
               <Route exact path="/tag" component={Tag} />
               <Route exact path="/author" component={Author} />

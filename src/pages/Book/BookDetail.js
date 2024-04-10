@@ -74,7 +74,7 @@ function BookDetail() {
         form.setFieldsValue({
             title: res?.data?.title,
             description: res?.data?.description,
-            numberOfPages: res?.data?.numberOfPages,
+            size: res?.data?.size,
             language: res?.data?.language,
             count: res?.data?.count,
             price: res?.data?.price,
@@ -111,7 +111,7 @@ function BookDetail() {
         var book = {
             title: values.title,
             description: values.description,
-            numberOfPages: values.numberOfPages,
+            size: values.size,
             language: values.language,
             count: values.count,
             price: values.price,
@@ -154,7 +154,7 @@ function BookDetail() {
                 <Col xs={24} md={16} className="mb-24">
                     <Card
                         bordered={false}
-                        title={<h6 className="font-semibold m-0">Book Information</h6>}
+                        title={<h6 className="font-semibold m-0">Shoe Information</h6>}
                         className="header-solid h-full card-profile-information"
                         bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
                     >
@@ -209,7 +209,7 @@ function BookDetail() {
 
                             <Row gutter={[24, 0]} >
                                 <Col span={24} md={12}>
-                                    <Form.Item name="numberOfPages" label="Number of pages"
+                                    <Form.Item name="size" label="Size"
                                         rules={[
                                             {
                                                 required: true,

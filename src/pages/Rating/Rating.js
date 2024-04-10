@@ -43,7 +43,7 @@ const columns = [
         width: "20%",
     },
     {
-        title: "BOOK",
+        title: "SHOE",
         dataIndex: "book",
         key: "book",
         width: "20%",
